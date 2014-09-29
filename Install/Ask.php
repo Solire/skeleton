@@ -1,8 +1,8 @@
 <?php
 /**
- * Demande de paramètre en fonction d'un fichier de config ini
+ * Prompts questions relative to ini-files
  *
- * @author  dev <dev@solire.fr>
+ * @author  thansen <thansen@solire.fr>
  * @license CC by-nc http://creativecommons.org/licenses/by-nc/3.0/fr/
  */
 
@@ -12,9 +12,9 @@ use Composer\Script\Event;
 use Install\Parameters;
 
 /**
- * Demande de paramètre en fonction d'un fichier de config ini
+ * Prompts questions relative to ini-files
  *
- * @author  dev <dev@solire.fr>
+ * @author  thansen <thansen@solire.fr>
  * @license CC by-nc http://creativecommons.org/licenses/by-nc/3.0/fr/
  */
 class Ask
@@ -27,7 +27,7 @@ class Ask
      *
      * @return void
      */
-    public static function Parameters(Event $event)
+    public static function parameters(Event $event)
     {
         $extras = $event->getComposer()->getPackage()->getExtra();
         $filesPath = $extras['solire']['parameters'];

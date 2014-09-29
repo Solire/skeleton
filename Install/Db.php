@@ -1,12 +1,24 @@
 <?php
+/**
+ * Install the databases needed in the project
+ *
+ * @author  thansen <thansen@solire.fr>
+ * @license CC by-nc http://creativecommons.org/licenses/by-nc/3.0/fr/
+ */
 
 namespace Install;
 
 use Composer\Script\Event;
 
+/**
+ * Install the databases needed in the project
+ *
+ * @author  thansen <thansen@solire.fr>
+ * @license CC by-nc http://creativecommons.org/licenses/by-nc/3.0/fr/
+ */
 class Db
 {
-    public static function Create(Event $event)
+    public static function create(Event $event)
     {
         $io = $event->getIO();
 
@@ -17,8 +29,11 @@ class Db
             $config = parse_ini_file($dataBase['config'], true);
             $section = $dataBase['section'];
             $server = new DbServer($config[$section], $io);
-            $server->create();
-            $server->import($dataBase['import']);
+
+            $dbCreated = $server->create();
+            if ($dbCreated) {
+                $server->import($dataBase['import']);
+            }
         }
     }
 }

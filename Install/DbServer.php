@@ -1,9 +1,22 @@
 <?php
+/**
+ * Connects to a sql server, creates databases, import sql file
+ *
+ * @author  thansen <thansen@solire.fr>
+ * @license CC by-nc http://creativecommons.org/licenses/by-nc/3.0/fr/
+ */
 
 namespace Install;
 
 use Doctrine\DBAL\DriverManager;
 use Composer\IO\IOInterface;
+
+/**
+ * Connects to a sql server, creates databases, import sql file
+ *
+ * @author  thansen <thansen@solire.fr>
+ * @license CC by-nc http://creativecommons.org/licenses/by-nc/3.0/fr/
+ */
 
 class DbServer
 {
@@ -51,6 +64,12 @@ class DbServer
         $dbName = $this->config['dbname'];
         try {
             $this->connection->getSchemaManager()->createDatabase($dbName);
+            $m = sprintf(
+                '<info>The database "%s" has been recreated</info>',
+                $this->config['dbname']
+            );
+            $this->io->write($m);
+            return true;
         } catch (\Exception $e) {
             $q = sprintf(
                 '<error>The database "%s" already exists, drop current databases ? (true)</error>',
@@ -65,8 +84,11 @@ class DbServer
                     $this->config['dbname']
                 );
                 $this->io->write($m);
+                return true;
             }
         }
+
+        return false;
     }
 
     public function import($sqlDumpPath)

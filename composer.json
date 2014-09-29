@@ -15,12 +15,17 @@
   },
   "require": {
     "php": ">=5.5",
-    "doctrine/dbal": "~2.4.0"
+    "doctrine/dbal": "2.4"
+  },
+  "require-dev": {
+    "composer/composer": "1.0.*@dev",
+    "symfony/console": "2.*"
   },
   "scripts": {
     "post-install-cmd": [
-      "Install\\Ask::Parameters",
-      "Install\\Db::Create"
+      "Install\\Ask::parameters",
+      "Install\\Db::create",
+      "Install\\Git::reinit"
     ],
     "post-update-cmd": [
       "Install\\Ask::Parameters",

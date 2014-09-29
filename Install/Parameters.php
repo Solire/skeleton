@@ -2,7 +2,7 @@
 /**
  * Prompt parameters from a list of ini-files
  *
- * @author  dev <dev@solire.fr>
+ * @author  thansen <thansen@solire.fr>
  * @license CC by-nc http://creativecommons.org/licenses/by-nc/3.0/fr/
  */
 
@@ -13,7 +13,7 @@ use Composer\IO\IOInterface;
 /**
  * Prompt parameters from a list of ini-files
  *
- * @author  dev <dev@solire.fr>
+ * @author  thansen <thansen@solire.fr>
  * @license CC by-nc http://creativecommons.org/licenses/by-nc/3.0/fr/
  */
 class Parameters
