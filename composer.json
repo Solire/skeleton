@@ -1,4 +1,9 @@
 {
+  "name": "solire/skeleton",
+  "type": "project",
+  "description": "",
+  "keywords": [""],
+  "license": "CC by-nc",
   "repositories": [
     {
       "type": "composer",
@@ -8,18 +13,9 @@
   "autoload": {
     "psr-4": { "Install\\": "./Install/" }
   },
-  "require-to-come": {
-    "solire/lib": ">=4.2",
-    "solire/back": ">=4.2",
-    "solire/front": ">=4.2"
-  },
   "require": {
     "php": ">=5.5",
-    "doctrine/dbal": "~2.4.0",
-    "symfony/console": "2.*"
-  },
-  "require-dev": {
-    "composer/composer": "1.0.*@dev"
+    "doctrine/dbal": "~2.4.0"
   },
   "scripts": {
     "post-install-cmd": [
