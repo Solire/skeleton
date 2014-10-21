@@ -52,7 +52,7 @@
         {
           "config" : "config/local.ini",
           "section" : "database",
-          "import" : "db/squelette.sql"
+          "import" : "db/skeleton.sql"
         }
       ]
     }
