@@ -10,22 +10,23 @@
       "url": "http://satis.solire.fr/"
     }
   ],
-  "autoload": {
-    "psr-4": { "Install\\": "./Install/" }
-  },
   "require": {
     "php": ">=5.5",
-    "doctrine/dbal": "2.4"
+    "doctrine/dbal": "2.4",
+    "solire/install": "dev-master",
+    "solire/lib": "dev-master",
+    "solire/back": "dev-master",
+    "solire/front": "dev-master"
   },
   "require-dev": {
-    "composer/composer": "1.0.*@dev",
-    "symfony/console": "2.*"
+    "m6web/coke": "~1.2",
+    "siwayll/phpcs-norme-dpsi": "~3.0"
   },
   "scripts": {
     "post-install-cmd": [
-      "Install\\Ask::parameters",
-      "Install\\Db::create",
-      "Install\\Git::reinit"
+      "Solire\\Install\\Ask::parameters",
+      "Solire\\Install\\Db::create",
+      "Solire\\Install\\Git::reinit"
     ],
     "post-update-cmd": [
       "Install\\Ask::Parameters",
