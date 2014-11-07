@@ -29,8 +29,8 @@
       "Solire\\Install\\Git::reinit"
     ],
     "post-update-cmd": [
-      "Install\\Ask::Parameters",
-      "Install\\Db::Create"
+      "Solire\\Install\\Ask::Parameters",
+      "Solire\\Install\\Db::Create"
     ]
   },
   "extra": {
