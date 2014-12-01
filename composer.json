@@ -11,8 +11,8 @@
     }
   ],
   "require": {
-    "php": ">=5.5",
-    "doctrine/dbal": "2.4",
+    "php": ">=5.6",
+    "doctrine/dbal": "2.4.*",
     "solire/install": "dev-master",
     "solire/lib": "dev-master",
     "solire/back": "dev-master",
@@ -24,29 +24,27 @@
   },
   "scripts": {
     "post-install-cmd": [
+      "Solire\\Install\\Project::name",
       "Solire\\Install\\Ask::parameters",
       "Solire\\Install\\Db::create",
+      "Solire\\Install\\Symlinks::create",
       "Solire\\Install\\Git::reinit"
     ],
     "post-update-cmd": [
-      "Solire\\Install\\Ask::Parameters",
-      "Solire\\Install\\Db::Create"
+      "Solire\\Install\\Project::name",
+      "Solire\\Install\\Ask::parameters",
+      "Solire\\Install\\Db::create",
+      "Solire\\Install\\Symlinks::create"
     ]
   },
   "extra": {
     "solire": {
-      "parameters" : {
+      "ask" : {
         "config/local" : {
-          "sections" : ["database", "base"],
-          "hideAnswer" : {
-            "database" : ["password"]
-          }
+          "sections" : ["database", "base"]
         },
         "config/marvin" : {
           "sections" : ["contact"]
-        },
-        "config/main" : {
-          "sections" : ["project"]
         }
       },
       "db" : [
