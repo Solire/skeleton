@@ -31,9 +31,6 @@
       "Solire\\Install\\Git::reinit"
     ],
     "post-update-cmd": [
-      "Solire\\Install\\Project::name",
-      "Solire\\Install\\Ask::parameters",
-      "Solire\\Install\\Db::create",
       "Solire\\Install\\Symlinks::create"
     ]
   },
