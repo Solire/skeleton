@@ -52,5 +52,10 @@
         }
       ]
     }
+  },
+  "autoload": {
+    "psr-4": {
+      "Projet\\": "./Projet"
+    }
   }
 }
