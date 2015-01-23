@@ -29,7 +29,7 @@
       "Solire\\Install\\Ask::parameters",
       "Solire\\Install\\Db::create",
       "Solire\\Install\\Symlinks::create",
-      "Solire\\Install\\Git::reinit"
+      "Solire\\Install\\Git::init"
     ],
     "post-update-cmd": [
       "Solire\\Install\\Symlinks::create"
