@@ -28,8 +28,7 @@
       "Solire\\Install\\Project::name",
       "Solire\\Install\\Ask::parameters",
       "Solire\\Install\\Db::create",
-      "Solire\\Install\\Symlinks::create",
-      "Solire\\Install\\Git::init"
+      "Solire\\Install\\Symlinks::create"
     ],
     "post-update-cmd": [
       "Solire\\Install\\Symlinks::create"
