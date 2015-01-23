@@ -49,7 +49,12 @@ Thumbs.db
 /config/marvin.ini
 /config/main.ini
 
+# Composer, bower #
+###################
 composer.lock
 vendor/
-
 bower_components/
+
+# Liens symboliques #
+#####################
+/public/default/
