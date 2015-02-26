@@ -23,10 +23,12 @@ deny from all
     RewriteRule ^sitemap\.xml$                                              index.php?controller=sitemap&action=start&%{QUERY_STRING} [L]
 
     # Controle cache js et css
-    RewriteRule ^(.+)\.[0-9]{10,}(\.js|\.css)$ $1$2 [L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.+)\.[0-9]{10,}(\.js|\.css)$                              $1$2 [L]
 
     # Images & documents ajoutés par l'utilisateur
-    RewriteRule ^(projet/upload/|)((temp-|)[0-9]+)/(.+\.(jpg|jpeg|png|gif|pdf))$    upload/$2/$4 [L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^((temp-|)[0-9]+)/(.+\.(jpg|jpeg|png|gif|pdf))$             upload/$1/$3 [L]
 
     RewriteRule ^$                                                          index.php?%{QUERY_STRING} [L]
     RewriteRule ^([a-zA-Z0-9\-]+)\.html$                                    index.php?action=$1&%{QUERY_STRING} [L]
@@ -35,6 +37,11 @@ deny from all
 
     RewriteRule ^([a-zA-Z0-9/\-]+).xml$                                     index.php?controller=$1&output=rss&%{QUERY_STRING} [L]
     RewriteRule ^([a-zA-Z0-9/\-]+)/([a-zA-Z0-9\-]+)\.pdf$                   index.php?controller=$1&action=$2&output=pdf&%{QUERY_STRING} [L]
+
+    RewriteCond %{REQUEST_FILENAME} !-f [OR]
+    RewriteCond %{REQUEST_FILENAME} ^\. [OR]
+    RewriteCond %{REQUEST_FILENAME} (?<!index)\.php$
+    RewriteRule .* index.php?controller=error&action=error404 [L]
 </IfModule>
 
 # ----------------------------------------------------------------------
