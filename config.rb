@@ -24,3 +24,6 @@ javascripts_dir = "js"
 # and then run:
 # sass-convert -R --from scss --to sass sass scss && rm -rf sass && mv scss sass
 # output_style = :compressed
+
+# Pour retrouver les lignes du fichier sass avec les outils de debug de navigateur
+sourcemap = true
