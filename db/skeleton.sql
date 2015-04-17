@@ -130,7 +130,14 @@ INSERT INTO `gab_champ` (`id`, `id_parent`, `type_parent`, `id_group`, `label`, 
 (4, 2, 'gabarit', 1, 'Code de suivi statistiques', 'code_google_analytics', 'TEXTAREA', 'MIX', 'fac', 1, 1, 3, 'text NOT NULL', '', ''),
 (5, 2, 'gabarit', 1, 'Nom du publisher', 'publisher_nom', 'TEXT', 'MIX', 'fac', 1, 1, 6, 'varchar(255) NOT NULL', '', ''),
 (6, 1, 'bloc', 0, 'Compte Google + https://plus.google.com/ ', 'compte_google', 'TEXT', 'MIX', 'fac', 1, 1, 0, 'varchar(255) NOT NULL', '', ''),
-(7, 1, 'bloc', 0, 'Nom de l''auteur', 'nom_de_lauteur', 'TEXT', 'MIX', 'fac', 1, 1, 0, 'varchar(255) NOT NULL', '', '');
+(7, 1, 'bloc', 0, 'Nom de l''auteur', 'nom_de_lauteur', 'TEXT', 'MIX', 'fac', 1, 1, 0, 'varchar(255) NOT NULL', '', ''),
+(8, 2, 'gabarit', 2, 'Raison sociale', 'raison_sociale', 'TEXT', 'MIX', 'oblig', 1, 1, 0, 'varchar(255) NOT NULL', '', ''),
+(9, 2, 'gabarit', 2, 'Adresse', 'adresse', 'TEXT', 'MIX', 'oblig', 1, 1, 1, 'varchar(255) NOT NULL', '', ''),
+(10, 2, 'gabarit', 2, 'Code postal', 'code_postal', 'TEXT', 'MIX', 'oblig', 1, 1, 2, 'varchar(255) NOT NULL', '', ''),
+(11, 2, 'gabarit', 2, 'Ville', 'ville', 'TEXT', 'MIX', 'oblig', 1, 1, 3, 'varchar(255) NOT NULL', '', ''),
+(12, 2, 'gabarit', 2, 'Pays', 'pays', 'TEXT', 'MIX', 'fac', 1, 1, 4, 'varchar(255) NOT NULL', '', ''),
+(13, 2, 'gabarit', 2, 'Téléphone', 'telephone', 'TEXT', 'MIX', 'fac', 1, 1, 5, 'varchar(255) NOT NULL', '', ''),
+(14, 2, 'gabarit', 2, 'Email', 'email', 'TEXT', 'MIX', 'oblig', 1, 1, 6, 'varchar(255) NOT NULL', '', '');
 
 -- --------------------------------------------------------
 
@@ -152,7 +159,8 @@ CREATE TABLE IF NOT EXISTS `gab_champ_group` (
 --
 
 INSERT INTO `gab_champ_group` (`id`, `label`, `name`, `id_gabarit`, `ordre`) VALUES
-(1, 'Paramètres pour le référencement', '', 2, 0);
+(1, 'Paramètres pour le référencement', '', 2, 0),
+(2, 'Coordonnées', '', 2, 1);
 
 -- --------------------------------------------------------
 
@@ -385,6 +393,13 @@ CREATE TABLE IF NOT EXISTS `main_element_commun` (
   `publisher` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `code_google_analytics` text COLLATE utf8_unicode_ci NOT NULL,
   `publisher_nom` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `raison_sociale` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `adresse` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `code_postal` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `ville` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `pays` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `telephone` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL
   PRIMARY KEY (`id_gab_page`,`id_version`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
