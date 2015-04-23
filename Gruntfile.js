@@ -94,7 +94,7 @@ module.exports = function (grunt) {
 //          ],
 //          src: './dist/',
 //          dest: 'www',
-//          host: 'fideliumzu@ftp.fidelium-immobilier.fr'
+//          host: 'user@doma.in'
 //        }
 //      }
     },
