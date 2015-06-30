@@ -20,28 +20,29 @@ deny from all
     RewriteRule ^robots\.txt$ - [L]
 
     # Sitemap(s)
-    RewriteRule ^sitemap\.xml$                                              index.php?controller=sitemap&action=start&%{QUERY_STRING} [L]
+    RewriteRule ^sitemap\.xml$                                                  index.php?controller=sitemap&action=start&%{QUERY_STRING} [L]
 
     # Controle cache js et css
     RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^(.+)\.[0-9]{10,}(\.js|\.css)$                              $1$2 [L]
+    RewriteRule ^(.+)\.[0-9]{10,}(\.js|\.css)$                                  $1$2 [L]
 
     # Images & documents ajoutés par l'utilisateur
     RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^((temp-|)[0-9]+)/(.+\.(jpg|jpeg|png|gif|pdf))$             upload/$1/$3 [L]
+    RewriteRule ^((temp-|)[0-9]+)/(.+\.(jpg|jpeg|png|gif|pdf))$                 upload/$1/$3 [L]
 
-    RewriteRule ^$                                                          index.php?%{QUERY_STRING} [L]
-    RewriteRule ^([a-zA-Z0-9\-]+)\.html$                                    index.php?action=$1&%{QUERY_STRING} [L]
-    RewriteRule ^([a-zA-Z0-9/\-]+)/$                                        index.php?controller=$1&%{QUERY_STRING} [L]
-    RewriteRule ^([a-zA-Z0-9/\-]+)/([a-zA-Z0-9\-]+)\.html$                  index.php?controller=$1&action=$2&%{QUERY_STRING} [L]
+    RewriteRule ^$                                                              index.php?%{QUERY_STRING} [L]
+    RewriteRule ^([a-zA-Z0-9\-]+)\.html$                                        index.php?action=$1&%{QUERY_STRING} [L]
+    RewriteRule ^([a-zA-Z0-9/\-]+)/$                                            index.php?controller=$1&%{QUERY_STRING} [L]
+    RewriteRule ^([a-zA-Z0-9/\-]+)/([a-zA-Z0-9\-]+)\.html$                      index.php?controller=$1&action=$2&%{QUERY_STRING} [L]
 
-    RewriteRule ^([a-zA-Z0-9/\-]+).xml$                                     index.php?controller=$1&output=rss&%{QUERY_STRING} [L]
-    RewriteRule ^([a-zA-Z0-9/\-]+)/([a-zA-Z0-9\-]+)\.pdf$                   index.php?controller=$1&action=$2&output=pdf&%{QUERY_STRING} [L]
+    RewriteRule ^([a-zA-Z0-9/\-]+).xml$                                         index.php?controller=$1&output=rss&%{QUERY_STRING} [L]
+    RewriteRule ^([a-zA-Z0-9/\-]+)/([a-zA-Z0-9\-]+)\.pdf$                       index.php?controller=$1&action=$2&output=pdf&%{QUERY_STRING} [L]
 
-    RewriteCond %{REQUEST_FILENAME} !-f [OR]
-    RewriteCond %{REQUEST_FILENAME} ^\. [OR]
-    RewriteCond %{REQUEST_FILENAME} (?<!index)\.php$
-    RewriteRule .* index.php?controller=error&action=error404 [L]
+    RewriteCond %{REQUEST_FILENAME} !index\.php
+    RewriteCond %{REQUEST_FILENAME} !public/
+    RewriteCond %{REQUEST_FILENAME} !upload/
+    RewriteCond %{REQUEST_FILENAME} !solireBackup/
+    RewriteRule ^(.*)$ index.php?controller=error&action=error404 [L]
 </IfModule>
 
 # ----------------------------------------------------------------------
