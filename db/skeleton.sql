@@ -399,7 +399,7 @@ CREATE TABLE IF NOT EXISTS `main_element_commun` (
   `ville` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `pays` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `telephone` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL
+  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id_gab_page`,`id_version`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
