@@ -202,6 +202,7 @@ INSERT INTO `gab_champ_param` (`code`, `name`, `default_value`, `code_champ_type
 ('EXTENSIONS.ALLOW', 'Filtre par extension (.gif;.png)', '', 'FILE'),
 ('CROP.WIDTH.MIN', 'Largeur minimale de redimensionnement', '', 'FILE'),
 ('CROP.HEIGHT.MIN', 'Hauteur minimale de redimensionnement', '', 'FILE'),
+('MINIATURE', 'Miniature (200x100;*x50;50x*)', '', 'FILE'),
 ('TABLE.NAME', 'Nom de la table', '', 'AUTOCOMPLETE'),
 ('TABLE.FIELD.LABEL', 'Nom du champ label', '', 'AUTOCOMPLETE'),
 ('QUERY.FILTER', 'Filtre de la requête', '', 'AUTOCOMPLETE'),
