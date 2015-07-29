@@ -46,8 +46,6 @@ Thumbs.db
 # Configuration #
 #################
 /config/local.ini
-/config/marvin.ini
-/config/main.ini
 
 # Composer, bower #
 ###################
@@ -58,3 +56,13 @@ bower_components/
 # Liens symboliques #
 #####################
 /public/default/
+
+# sass #
+#########
+.sass-cache
+public/projet/front/css
+
+# dist #
+########
+/node_modules/
+/dist/
