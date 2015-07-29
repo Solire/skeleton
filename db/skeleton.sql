@@ -275,13 +275,13 @@ CREATE TABLE IF NOT EXISTS `gab_champ_typedonnee` (
 --
 
 INSERT INTO `gab_champ_typedonnee` (`code`, `ordre`) VALUES
+('NOTNUL', 1),
+('MIX', 2),
 ('DATE', 3),
-('DATETIME', 3),
-('FILE', 4),
-('MAIL', 5),
-('MIX', 1),
-('NOTNUL', 2),
-('GMAP_POINT', 6);
+('DATETIME', 4),
+('FILE', 5),
+('MAIL', 6),
+('GMAP_POINT', 7);
 
 -- --------------------------------------------------------
 
