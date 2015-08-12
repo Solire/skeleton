@@ -577,6 +577,37 @@ CREATE TABLE IF NOT EXISTS `version` (
 INSERT INTO `version` (`id`, `suf`, `nom`, `exotique`, `domaine`, `analytics`, `sitemap-google`, `sitemap-yahoo`, `sitemap-bing`, `id_api`) VALUES
 (1, 'FR', 'français (French)', 0, '', '', '', '', '', 1);
 
+--
+-- Structure de la table `so_fail2ban`
+--
+
+CREATE TABLE IF NOT EXISTS `so_fail2ban` (
+`id` int(11) NOT NULL,
+  `ip` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
+  `endDate` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Index pour les tables exportées
+--
+
+--
+-- Index pour la table `so_fail2ban`
+--
+ALTER TABLE `so_fail2ban`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT pour les tables exportées
+--
+
+--
+-- AUTO_INCREMENT pour la table `so_fail2ban`
+--
+ALTER TABLE `so_fail2ban`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
