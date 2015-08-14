@@ -14,7 +14,7 @@
     "php": ">=5.6",
     "doctrine/dbal": "2.4.*",
 
-    "solire/install": "0.0.*",
+    "solire/install": "0.1.*",
     "solire/lib": "5.0.*",
     "solire/back": "5.0.*",
     "solire/front": "5.0.*"
