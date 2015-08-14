@@ -1,0 +1,10 @@
+dirs:
+  default/front: vendor/solire/front
+  default/back: vendor/solire/back
+
+#  vel/Front: vendor/solire/vel/Front
+#  vel/Back: vendor/solire/vel/back
+
+#  client/Front: vendor/solire/client/Front
+#  client/Back: vendor/solire/client/back
+
