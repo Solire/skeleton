@@ -35,9 +35,6 @@ deny from all
     RewriteRule ^([a-zA-Z0-9/\-]+)/$                                            index.php?controller=$1&%{QUERY_STRING} [L]
     RewriteRule ^([a-zA-Z0-9/\-]+)/([a-zA-Z0-9\-]+)\.html$                      index.php?controller=$1&action=$2&%{QUERY_STRING} [L]
 
-    RewriteRule ^([a-zA-Z0-9/\-]+).xml$                                         index.php?controller=$1&output=rss&%{QUERY_STRING} [L]
-    RewriteRule ^([a-zA-Z0-9/\-]+)/([a-zA-Z0-9\-]+)\.pdf$                       index.php?controller=$1&action=$2&output=pdf&%{QUERY_STRING} [L]
-
     RewriteCond %{REQUEST_FILENAME} !index\.php
     RewriteCond %{REQUEST_FILENAME} !public/
     RewriteCond %{REQUEST_FILENAME} !upload/
