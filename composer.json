@@ -12,7 +12,6 @@
   ],
   "require": {
     "php": ">=5.6",
-    "doctrine/dbal": "2.4.*",
 
     "solire/install": "dev-feature/refonteback",
     "solire/lib": "dev-feature/refonteback",
