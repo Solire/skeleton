@@ -16,7 +16,7 @@
     "solire/install": "dev-feature/refonteback",
     "solire/lib": "dev-feature/refonteback",
     "solire/back": "dev-feature/refonteback",
-    "solire/front": "dev-master"
+    "solire/front": "dev-develop"
   },
   "require-dev": {
     "m6web/coke": "~2.0",
