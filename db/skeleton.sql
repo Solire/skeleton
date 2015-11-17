@@ -521,7 +521,7 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `fonction` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `pass` char(64) COLLATE utf8_unicode_ci NOT NULL,
-  `cle` char(64) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `cle` char(128) COLLATE utf8_unicode_ci DEFAULT NULL,
   `adresse` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `cp` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
   `ville` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
