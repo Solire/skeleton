@@ -532,7 +532,7 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `site` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `description` text COLLATE utf8_unicode_ci NOT NULL,
   `photo` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `niveau` enum('redacteur','admin','solire') COLLATE utf8_unicode_ci NOT NULL,
+  `niveau` enum('editeur','administrateur','super administrateur') COLLATE utf8_unicode_ci NOT NULL,
   `gabarit_niveau` int(11) NOT NULL,
   `actif` tinyint(4) NOT NULL,
   `lat` float(10,7) NOT NULL,
@@ -548,8 +548,9 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
 --
 
 INSERT INTO `utilisateur` (`id`, `civilite`, `nom`, `prenom`, `societe`, `fonction`, `email`, `pass`, `cle`, `adresse`, `cp`, `ville`, `pays`, `tel`, `fax`, `site`, `description`, `photo`, `niveau`, `gabarit_niveau`, `actif`, `lat`, `lng`, `date_crea`, `suppr`) VALUES
-(1, 'M', 'DEGETZ', 'Laurent', 'Solire', '', 'contact@solire.fr', '$2y$10$VfOIubFk/IjdqxPwL60xtOrxXwlOEQqSn5Ml0Jc5z0cSkenCgH8/e', NULL, '34 rue du Professeur Weill', '69006', 'Lyon', 1, '', '', 'http://www.solire.fr', '', '', 'solire', 0, 1, 0.0000000, 0.0000000, '2014-09-26', '0000-00-00 00:00:00'),
-(2, 'M.', 'Administrateur', 'Standard', '', '', 'admin@solire.fr', '$2y$10$VfOIubFk/IjdqxPwL60xtOrxXwlOEQqSn5Ml0Jc5z0cSkenCgH8/e', NULL, '', '', '', 0, '', '', '', '', '', '', 0, 1, 0.0000000, 0.0000000, '2014-09-26', '0000-00-00 00:00:00');
+(1, 'M', 'DEGETZ', 'Laurent', 'Solire', '', 'superadministrateur@solire.fr', '$2y$10$VfOIubFk/IjdqxPwL60xtOrxXwlOEQqSn5Ml0Jc5z0cSkenCgH8/e', NULL, '34 rue du Professeur Weill', '69006', 'Lyon', 1, '', '', 'http://www.solire.fr', '', '', 'super administrateur', 0, 1, 0.0000000, 0.0000000, '2014-09-26', '0000-00-00 00:00:00'),
+(2, 'M.', 'Administrateur', 'Standard', '', '', 'administrateur@solire.fr', '$2y$10$VfOIubFk/IjdqxPwL60xtOrxXwlOEQqSn5Ml0Jc5z0cSkenCgH8/e', NULL, '', '', '', 0, '', '', '', '', '', 'administrateur', 0, 1, 0.0000000, 0.0000000, '2014-09-26', '0000-00-00 00:00:00')
+(3, 'M.', 'Éditeur', 'Standard', '', '', 'editeur@solire.fr', '$2y$10$VfOIubFk/IjdqxPwL60xtOrxXwlOEQqSn5Ml0Jc5z0cSkenCgH8/e', NULL, '', '', '', 0, '', '', '', '', '', 'editeur', 0, 1, 0.0000000, 0.0000000, '2014-09-26', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
