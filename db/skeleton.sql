@@ -548,9 +548,9 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
 --
 
 INSERT INTO `utilisateur` (`id`, `civilite`, `nom`, `prenom`, `societe`, `fonction`, `email`, `pass`, `cle`, `adresse`, `cp`, `ville`, `pays`, `tel`, `fax`, `site`, `description`, `photo`, `niveau`, `gabarit_niveau`, `actif`, `lat`, `lng`, `date_crea`, `suppr`) VALUES
-(1, 'M', 'DEGETZ', 'Laurent', 'Solire', '', 'superadministrateur@solire.fr', '$2y$10$VfOIubFk/IjdqxPwL60xtOrxXwlOEQqSn5Ml0Jc5z0cSkenCgH8/e', NULL, '34 rue du Professeur Weill', '69006', 'Lyon', 1, '', '', 'http://www.solire.fr', '', '', 'super administrateur', 0, 1, 0.0000000, 0.0000000, '2014-09-26', '0000-00-00 00:00:00'),
-(2, 'M.', 'Administrateur', 'Standard', '', '', 'administrateur@solire.fr', '$2y$10$VfOIubFk/IjdqxPwL60xtOrxXwlOEQqSn5Ml0Jc5z0cSkenCgH8/e', NULL, '', '', '', 0, '', '', '', '', '', 'administrateur', 0, 1, 0.0000000, 0.0000000, '2014-09-26', '0000-00-00 00:00:00')
-(3, 'M.', 'Éditeur', 'Standard', '', '', 'editeur@solire.fr', '$2y$10$VfOIubFk/IjdqxPwL60xtOrxXwlOEQqSn5Ml0Jc5z0cSkenCgH8/e', NULL, '', '', '', 0, '', '', '', '', '', 'editeur', 0, 1, 0.0000000, 0.0000000, '2014-09-26', '0000-00-00 00:00:00');
+(1, 'M', 'Super Administrateur', 'Solire', 'Solire', '', 'contact@solire.fr', '$2y$10$VfOIubFk/IjdqxPwL60xtOrxXwlOEQqSn5Ml0Jc5z0cSkenCgH8/e', NULL, '34 rue du Professeur Weill', '69006', 'Lyon', 1, '', '', 'http://www.solire.fr', '', '', 'super administrateur', 0, 1, 0.0000000, 0.0000000, '2014-09-26', '0000-00-00 00:00:00'),
+(2, 'M.', 'Administrateur', 'Solire', 'Solire', '', 'admin@solire.fr', '$2y$10$VfOIubFk/IjdqxPwL60xtOrxXwlOEQqSn5Ml0Jc5z0cSkenCgH8/e', NULL, '', '', '', 0, '', '', '', '', '', 'administrateur', 0, 1, 0.0000000, 0.0000000, '2014-09-26', '0000-00-00 00:00:00'),
+(3, 'M.', 'Éditeur', 'Solire', 'Solire', '', 'editeur@solire.fr', '$2y$10$VfOIubFk/IjdqxPwL60xtOrxXwlOEQqSn5Ml0Jc5z0cSkenCgH8/e', NULL, '', '', '', 0, '', '', '', '', '', 'editeur', 0, 1, 0.0000000, 0.0000000, '2014-09-26', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
