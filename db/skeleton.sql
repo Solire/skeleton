@@ -212,7 +212,8 @@ INSERT INTO `gab_champ_param` (`code`, `name`, `default_value`, `code_champ_type
 ('VALUE.DEFAULT', 'Valeur par défaut', '', 'AUTOCOMPLETE'),
 ('VISUEL.ID', 'Visuel', '', 'ALT'),
 ('TYPE.GAB.PAGE', 'Jointure avec gab_page', '1', 'JOIN'),
-('VALUE.DEFAULT', 'Valeur par défaut', '', 'JOIN');
+('VALUE.DEFAULT', 'Valeur par défaut', '', 'JOIN'),
+('DATALIST', 'Suggestions', '', 'TEXT');
 
 -- --------------------------------------------------------
 
