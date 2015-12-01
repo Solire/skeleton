@@ -1,0 +1,19 @@
+---
+config/local.yml:
+  database:
+    host:
+      text: Database host
+      default: localhost
+    user:
+      text: Database root's username
+      default: root
+    password:
+      text: Database root's password
+    dbname:
+      text: Database name
+  base:
+    url:
+      text: Url complète d'accès
+    root:
+      text: Partie de l'url suivant le nom de domaine
+...

@@ -12,7 +12,6 @@
   ],
   "require": {
     "php": ">=5.6",
-
     "solire/install": "dev-feature/refonteback",
     "solire/lib": "dev-feature/refonteback",
     "solire/back": "dev-feature/refonteback",
@@ -24,10 +23,12 @@
   },
   "scripts": {
     "post-install-cmd": [
+      "Solire\\Install\\Ask::init",
       "Solire\\Install\\Project::name",
       "Solire\\Install\\Ask::parameters",
       "Solire\\Install\\Db::create",
-      "Solire\\Install\\Bower::install",
+      "Solire\\Install\\Ask::write",
+      "Solire\\Install\\FrontEnd::install",
       "Solire\\Install\\Symlinks::create"
     ],
     "post-update-cmd": [
@@ -37,22 +38,19 @@
   },
   "extra": {
     "solire": {
-      "frontEnd":{
-        "dirs" : "config/symlinks.yml"
+      "ask": "config/questions.yml",
+      "parameters": {
+        "config/local.yml": {},
+        "config/main.yml": {}
       },
-      "ask" : {
-        "config/local" : {
-          "sections" : ["database", "base"]
-        },
-        "config/marvin" : {
-          "sections" : ["contact"]
-        }
+      "frontEnd": {
+        "dirs": "config/symlinks.yml"
       },
-      "db" : [
+      "db": [
         {
-          "config" : "config/local.ini",
-          "section" : "database",
-          "import" : "db/skeleton.sql"
+          "config": "config/local.yml",
+          "section": "database",
+          "import": "db/skeleton.sql"
         }
       ]
     }
