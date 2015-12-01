@@ -28,16 +28,23 @@
       "Solire\\Install\\Ask::parameters",
       "Solire\\Install\\Db::create",
       "Solire\\Install\\Ask::write",
+      "Solire\\Install\\Dir::allowPermissions",
       "Solire\\Install\\FrontEnd::install",
       "Solire\\Install\\Symlinks::create"
     ],
     "post-update-cmd": [
+      "Solire\\Install\\Dir::allowPermissions",
       "Solire\\Install\\FrontEnd::install",
       "Solire\\Install\\Symlinks::create"
     ]
   },
   "extra": {
     "solire": {
+      "allowPermissions": [
+        "cache/twig",
+        "upload",
+        "upload/temp"
+      ],
       "ask": "config/questions.yml",
       "parameters": {
         "config/local.yml": {},
