@@ -23,36 +23,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `back_log`
---
-
-CREATE TABLE IF NOT EXISTS `back_log` (
-  `logId` int(100) NOT NULL AUTO_INCREMENT,
-  `logDate` date NOT NULL,
-  `logTime` time NOT NULL,
-  `logIp` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `logString` varchar(1000) COLLATE utf8_unicode_ci NOT NULL,
-  `logStrOpt` varchar(1000) COLLATE utf8_unicode_ci NOT NULL,
-  `logIdUser` int(100) NOT NULL,
-  PRIMARY KEY (`logId`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `board_state`
---
-
-CREATE TABLE IF NOT EXISTS `board_state` (
-  `id_utilisateur` int(11) NOT NULL,
-  `cookie` text COLLATE utf8_unicode_ci NOT NULL,
-  `id_api` tinyint(4) NOT NULL,
-  UNIQUE KEY `id_utilisateur` (`id_utilisateur`,`id_api`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
--- --------------------------------------------------------
-
---
 -- Structure de la table `gab_api`
 --
 
@@ -463,6 +433,20 @@ CREATE TABLE IF NOT EXISTS `media_fichier_utilise` (
   `id_version` tinyint(1) NOT NULL,
   UNIQUE KEY `rewriting` (`rewriting`,`id_gab_page`,`id_version`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `monolog`
+--
+
+CREATE TABLE IF NOT EXISTS `monolog` (
+  `channel` varchar(255) DEFAULT NULL,
+  `level` int(11) DEFAULT NULL,
+  `message` longtext,
+  `time` int(10) unsigned DEFAULT NULL,
+  `remoteip` varchar(255) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ;
 
 -- --------------------------------------------------------
 

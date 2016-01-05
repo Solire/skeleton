@@ -1,0 +1,17 @@
+---
+database:
+  name: base
+  dsn: mysql:dbname=%s;host=%s
+  host: localhost
+  dbname: ""
+  port: "3306"
+  user: root
+  password: ""
+  utf8: "1"
+  error: "1"
+  profil: ""
+  nocache: ""
+base:
+  url: http://localhost/hb_schneider/
+  root: hb_schneider/
+...

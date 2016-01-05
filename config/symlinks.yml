@@ -1,3 +1,5 @@
+linkMask: "public/%s/%s"
+targetMask: "%s/public"
 dirs:
   default/front: vendor/solire/front
   default/back: vendor/solire/back

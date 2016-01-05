@@ -1,0 +1,40 @@
+---
+project:
+  name: ""
+  code: ""
+  defaultApp: Front
+session:
+  name: ""
+dirs:
+  controllers: '%s/controller/'
+  views: view/
+  temp: temp/
+  config: config/
+  formulaire: config/form/
+  mail: mail/
+  hooks: hook
+  i18n: locale/
+  datatable: config/datatable/
+format:
+  controller-action: '%sAction'
+  view-file: '%s.phtml'
+  session: '%ssession.ini'
+cache:
+  dir: cache/
+upload:
+  path: upload
+  temp: temp
+  vignette: mini
+  apercu: apercu
+applications:
+  Projet:
+    name: Projet
+    dir: Projet
+    namespace: Projet
+    public: public/projet
+  Solire:
+    name: Solire
+    dir: vendor/solire
+    namespace: Solire
+    public: public/default
+...
