@@ -23,7 +23,6 @@ deny from all
     RewriteRule .* - [E=STATUS:live]
 
     #If the ENVIRONMENT variable is 'maintenance' then show a maintenance page
-    RewriteCond %{REQUEST_URI} !^/maintenance\.html$ [NC]
     RewriteCond %{ENV:STATUS} ^maintenance$
     RewriteRule ^.*$ maintenance.php [L]
 
