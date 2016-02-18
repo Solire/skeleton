@@ -1,7 +1,8 @@
 <?php
+
 namespace Solire\Lib;
 
-/**
+/*
  * Affichage des erreurs
  */
 error_reporting(E_ALL & ~E_STRICT);
@@ -11,7 +12,7 @@ include './vendor/autoload.php';
 
 require './vendor/solire/lib/init.php';
 
-/**
+/*
  * Marvin displays (if true) or sends an email (if false)
  */
 $debug = false;
