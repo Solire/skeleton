@@ -3,15 +3,15 @@ database:
   name: base
   dsn: mysql:dbname=%s;host=%s
   host: localhost
-  dbname: ""
+  dbname: ~
   port: "3306"
   user: root
-  password: ""
+  password: ~
   utf8: "1"
   error: "1"
-  profil: ""
-  nocache: ""
+  profil: ~
+  nocache: ~
 base:
-  url: http://localhost/hb_schneider/
-  root: hb_schneider/
+  url: ~
+  root: ~
 ...
