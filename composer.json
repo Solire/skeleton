@@ -22,7 +22,7 @@
     "siwayll/phpcs-norme-dpsi": "~3.2"
   },
   "scripts": {
-    "post-install-cmd": [
+    "post-create-project-cmd": [
       "Solire\\Install\\Ask::init",
       "Solire\\Install\\Project::name",
       "Solire\\Install\\Ask::parameters",
